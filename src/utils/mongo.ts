@@ -3,7 +3,8 @@ import config from 'config';
 
 export async function connectToMongo() {
 	try {
-		await mongoose.connect(config.get('adUri'))
+		mongoose.set('strictQuery', false);
+		await mongoose.connect(config.get('dbUri'))
 		console.log('Connected to Database')
 	} catch (e) {
 		console.log(e)

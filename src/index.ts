@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
+console.log(process.env)
 import 'reflect-metadata';
 import express from 'express';
 import { buildSchema } from "type-graphql";
